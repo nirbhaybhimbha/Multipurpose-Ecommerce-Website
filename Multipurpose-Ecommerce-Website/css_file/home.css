@@ -1,0 +1,1147 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#cars {
+    font-family: "Oxygen", sans-serif;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.custom-dropdown {
+    position: relative;
+}
+
+.custom-dropdown a {
+    cursor: pointer;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: transparent;
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links li a {
+    font-family: "Oxygen", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.desktop-only {
+    display: flex;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    border-radius: 4px;
+    min-width: 150px;
+    z-index: 999;
+    flex-direction: column;
+    list-style: none;
+}
+
+#mobile-dropdown {
+    font-family: "Oxygen", sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 100%;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.dropdown-menu li {
+    padding: 8px 20px;
+}
+
+.dropdown-menu li a:hover {
+    color: rgba(115, 40, 126, 1);
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.custom-dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.icons {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.user {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+    min-width: 150px;
+    z-index: 999;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown ul li {
+    padding: 8px 12px;
+    transition: background 0.2s;
+}
+
+.dropdown ul li:hover {
+    background: #f0f0f0;
+}
+
+.dropdown ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 42px;
+        right: 0px;
+        background: rgba(0, 0, 0, 0.85);
+        flex-direction: column;
+        align-items: start;
+        width: 95%;
+        gap: 20px;
+        padding: 20px;
+
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .icons {
+        gap: 10px;
+    }
+}
+
+
+
+.user,
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user i,
+.cart i {
+    font-size: 16px;
+    color: white;
+}
+
+.small-arrow {
+    font-size: 10px;
+}
+
+.hero {
+    text-align: center;
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-family: "Oxygen", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 100%;
+    margin-bottom: 20px;
+    width: 75%;
+}
+
+.hero-content p {
+    font-family: "Oxygen", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(206, 204, 204, 1);
+    width: 55%;
+    margin: 1% 0% 3% 0;
+}
+
+.search-box {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    align-items: center;
+    border: 0.86px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    padding: 5px 10px;
+    background-color: #555;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.search-box input::placeholder {
+    color: rgba(206, 204, 204, 1);
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.featured-products {
+    padding: 5%;
+}
+
+.featured-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.featured-header h2 {
+    font-family: "Oxygen", sans-serif;
+    font-size: 36px;
+    color: rgba(61, 61, 61, 1);
+    font-weight: 700;
+    line-height: 100%;
+    margin: 0;
+}
+
+.featured-header p {
+    font-family: "Oxygen", sans-serif;
+    color: rgba(102, 102, 102, 1);
+    font-size: 16px;
+    font-weight: 400;
+    width: 45%;
+    line-height: 160%;
+    margin: 0;
+}
+
+.product-list {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.product-item {
+    width: 30%;
+    position: relative;
+}
+
+.product-item a {
+    text-decoration: none;
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #444;
+    color: white;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.product-thumb img {
+    width: 100%;
+}
+
+.product-title {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: rgba(64, 64, 64, 1);
+    margin: 8px 0 4px;
+    line-height: 100%;
+}
+
+.product-price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.price-old {
+    font-family: "Oxygen", sans-serif;
+    color: rgba(64, 64, 64, 1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    text-decoration: line-through;
+}
+
+.price-new {
+    font-family: "Oxygen", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 1);
+}
+
+.price-action {
+    cursor: pointer;
+}
+
+.category-section {
+    text-align: center;
+    padding: 5%;
+}
+
+.category-header h2 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    margin-bottom: 10px;
+    color: rgba(61, 61, 61, 1);
+}
+
+.category-header p {
+    color: rgba(102, 102, 102, 1);
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    margin: 0 auto 30px;
+    width: 55%;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.category-box {
+    background-color: rgba(166, 166, 166, 1);
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+    color: white;
+    font-weight: 500;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.category-box span {
+    font-family: "Oxygen", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 100%;
+    margin-bottom: 5px;
+}
+
+.large {
+    width: 35%;
+    height: 450px;
+}
+
+.small {
+    width: 350px;
+    height: 215px;
+}
+
+.category-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.popular-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 0;
+}
+
+.popular-text {
+    width: 60%;
+}
+
+.popular-text h2 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    color: rgba(61, 61, 61, 1);
+    margin-bottom: 10px;
+}
+
+.popular-text p {
+    font-family: "Oxygen", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(102, 102, 102, 1);
+    line-height: 160%;
+    width: 83%;
+}
+
+.view-all-btn {
+    background-color: rgba(40, 40, 40, 1);
+    font-family: "Exo", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.popular-header-p {
+    padding: 5%;
+}
+
+#product-section-id {
+    margin-bottom: 3%;
+}
+
+.view-all-btn:hover {
+    background-color: #000;
+}
+
+.selling-points-section {
+    background-color: rgba(102, 102, 102, 1);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 5%;
+}
+
+.selling-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+.selling-left h2 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    margin: 0;
+}
+
+.read-more-btn {
+    font-family: "Exo", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    width: 30%;
+    background-color: rgba(40, 40, 40, 1);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.selling-right {
+    width: 54%;
+}
+
+.intro-text {
+    font-family: "Oxygen", sans-serif;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 160%;
+}
+
+.selling-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat h3 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    margin-bottom: 10px;
+}
+
+.stat p {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 1);
+}
+
+.stat {
+    width: 48%;
+}
+
+.blog-section {
+    padding: 5%;
+}
+
+.blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.blog-title h2 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    margin: 0;
+    color: rgba(61, 61, 61, 1);
+}
+
+.blog-title p {
+    font-family: "Oxygen", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(102, 102, 102, 1);
+    line-height: 160%;
+    margin-top: 10px;
+    width: 63%;
+}
+
+.blog-btn {
+    font-family: "Exo", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 15%;
+}
+
+.blog-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+.blog-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blog-card a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blog-img {
+    width: 100%;
+    height: 250px;
+    background-color: rgba(166, 166, 166, 1);
+    border-radius: 12px;
+}
+
+.blog-meta {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+.blog-meta .author {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(166, 166, 166, 1);
+    border-radius: 50%;
+}
+
+.blog-card h4 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
+    margin: 0%;
+    color: rgba(64, 64, 64, 1);
+}
+
+.faq-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.faq-left {
+    width: 100%;
+}
+
+.faq-left h2 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    color: rgba(61, 61, 61, 1);
+    margin-bottom: 10px;
+}
+
+.faq-left p {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: rgba(102, 102, 102, 1);
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+.faq-btn {
+    font-family: "Exo", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    background-color: rgba(40, 40, 40, 1);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.faq-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.faq-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 15px;
+    cursor: pointer;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    padding: 15px;
+    font-size: 16px;
+    color: rgba(102, 102, 102, 1);
+    line-height: 160%;
+    background: #f9f9f9;
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .arrow {
+    transform: rotate(180deg);
+}
+
+
+.brand-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3%;
+    background-color: rgba(102, 102, 102, 1);
+    gap: 20px;
+}
+
+.footer {
+    background-color: rgba(61, 61, 61, 1);
+    color: white;
+    padding: 5% 0 2% 0;
+    text-align: center;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter h2 {
+    font-family: "Oxygen", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 100%;
+    width: 70%;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin: 0 auto 30px;
+    background-color: #3c3c3c;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 0.86px solid rgba(255, 255, 255, 0.6);
+    padding: 5px;
+}
+
+.newsletter-form input {
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    width: 80%;
+    background: transparent;
+    color: white;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(206, 204, 204, 1);
+}
+
+.newsletter-form button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    margin-bottom: 3%;
+}
+
+.column h4 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(154, 154, 154, 1);
+    margin-bottom: 10px;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.column ul li {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    line-height: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #eee;
+}
+
+.copyright {
+    border-top: 1px solid rgba(221, 221, 221, 1);
+    padding-top: 20px;
+    font-family: "Oxygen", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width:1030px) {
+    .blog-btn {
+        width: 25%;
+    }
+
+    .faq-btn {
+        width: 40%;
+    }
+}
+
+@media (max-width:880px) {
+    .search-box {
+        width: 38%;
+    }
+
+    .blog-btn {
+        width: 35%;
+    }
+
+    .faq-btn {
+        width: 45%;
+    }
+}
+
+@media (max-width:768px) {
+    .search-box {
+        width: 40%;
+    }
+
+    .hero-content h1 {
+        width: 100%;
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        width: 100%;
+    }
+
+    .featured-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-header p {
+        width: 75%;
+    }
+
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 40%;
+    }
+
+    .small {
+        width: 100%;
+        height: 165px;
+    }
+
+    .large {
+        height: 350px;
+    }
+
+    .popular-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popular-text {
+        width: 77%;
+        text-align: center;
+    }
+
+    .popular-text p {
+        width: 100%;
+    }
+
+    .selling-points-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .selling-right {
+        width: 90%;
+    }
+
+    .blog-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-title p {
+        width: 83%;
+        text-align: center;
+    }
+
+    .blog-btn {
+        width: 25%;
+    }
+
+    .blog-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-card {
+        width: 50%;
+    }
+
+    .faq-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faq-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3%;
+        text-align: center;
+    }
+
+    .faq-left p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .newsletter h2 {
+        width: 90%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brand-logos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faq-btn {
+        width: 30%;
+    }
+}
+
+@media (max-width:680px) {
+    .search-box {
+        width: 50%;
+    }
+}
+
+@media (max-width:550px) {
+    .search-box {
+        width: 55%;
+    }
+
+    .featured-header p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .category-header p {
+        width: 100%;
+    }
+
+    .popular-text {
+        width: 100%;
+    }
+
+    .blog-btn {
+        width: 35%;
+    }
+
+    .faq-btn {
+        width: 40%;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .newsletter h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .large {
+        height: 250px;
+    }
+
+    .small {
+        height: 130px;
+    }
+
+    .category-box span {
+        font-size: 16px;
+    }
+
+    .read-more-btn {
+        width: 40%;
+    }
+
+    .selling-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat {
+        width: 100%;
+        text-align: center;
+    }
+
+    .blog-btn {
+        width: 50%;
+    }
+
+    .faq-btn {
+        width: 55%;
+    }
+
+    .selling-left h2 {
+        font-size: 25px;
+        line-height: 33px;
+        text-align: center;
+    }
+
+    .selling-left {
+        align-items: center;
+    }
+
+    .newsletter h2 {
+        font-size: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 27px;
+    }
+
+    .search-box {
+        width: 65%;
+    }
+
+    .blog-card {
+        width: 100%;
+    }
+
+    .product-item {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 5% 0;
+    }
+
+    .category-header h2 {
+        font-size: 28px;
+    }
+
+    .popular-text h2 {
+        font-size: 28px;
+    }
+}

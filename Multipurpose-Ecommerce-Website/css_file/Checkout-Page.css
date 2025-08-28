@@ -1,0 +1,740 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#cars {
+    font-family: "Oxygen", sans-serif;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 1);
+    border: none;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: transparent;
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links li a {
+    font-family: "Oxygen", sans-serif;
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+}
+
+#mobile-dropdown {
+    border: none;
+    font-family: "Oxygen", sans-serif;
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.desktop-only {
+    display: flex;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.custom-dropdown {
+    position: relative;
+}
+
+.custom-dropdown a {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    border-radius: 4px;
+    min-width: 150px;
+    z-index: 999;
+    flex-direction: column;
+    list-style: none;
+}
+
+.dropdown-menu li a:hover {
+    color: rgba(115, 40, 126, 1);
+}
+
+.dropdown-menu li {
+    padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.custom-dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+
+
+.header-icons {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.profile-wrapper {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+    min-width: 150px;
+    z-index: 999;
+}
+
+.profile-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-dropdown ul li {
+    padding: 8px 12px;
+    transition: background 0.2s;
+}
+
+.profile-dropdown ul li:hover {
+    background: #f0f0f0;
+}
+
+.profile-dropdown ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 35px;
+        right: 0;
+        background-color: white;
+        width: 95%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .icons {
+        display: none;
+    }
+}
+
+.icons {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.user,
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user i,
+.cart i {
+    font-size: 16px;
+    color: white;
+}
+
+
+.checkout-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3%;
+}
+
+.payment-form {
+    background: white;
+    padding: 0px;
+    border-radius: 8px;
+    width: 58%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    margin: 0%;
+}
+
+.cart-details {
+    background: white;
+    border-radius: 8px;
+    width: 45%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(166, 166, 166, 1);
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    color: white;
+    padding: 3%;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 3%;
+}
+
+.set-flex-width {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 90%;
+}
+
+.set-width {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 80%;
+}
+
+form label {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(61, 61, 61, 1);
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row div {
+    flex: 1;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+button[type="submit"] {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    background: rgba(40, 40, 40, 1);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 35%;
+}
+
+.cart-details h3 {
+    background: rgba(166, 166, 166, 1);
+    color: white;
+    margin: 0px;
+    padding: 12px 20px;
+    border-radius: 8px 8px 0 0;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.cart-details table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    /* background-color: rgba(222, 223, 225, 1); */
+}
+
+.cart-details th {
+    text-align: left;
+    padding: 2% 3%;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(61, 61, 61, 1);
+}
+
+.cart-summary {
+    width: 45%;
+    background: #fdfdfd;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.text-font {
+    font-family: "Exo", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.cart-header {
+    background: rgba(166, 166, 166, 1);
+    color: #fff;
+    font-weight: bold;
+    padding: 14px 20px;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+
+}
+
+.cart-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #666;
+    height: 370px;
+    border: 1px solid rgba(222, 223, 225, 1);
+}
+
+.total {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.norel {
+    color: rgba(148, 148, 148, 1);
+}
+
+.cart-summary th,
+.cart-summary td {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.cart-summary th {
+    color: rgba(61, 61, 61, 1);
+    background: #f9f9f9;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    border-bottom: 1px dashed rgba(222, 223, 225, 1);
+}
+
+.set-botred {
+    border-bottom: 1px dashed rgba(222, 223, 225, 1);
+}
+
+.summary {
+    border-bottom: 1px dashed rgba(222, 223, 225, 1);
+}
+
+.cart-summary .summary td {
+    font-weight: bold;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.cart-summary .total td {
+    font-weight: bold;
+    border-top: 1px dashed #ccc;
+}
+
+.cart-summary .line td {
+    padding: 5px 0;
+    border: none;
+}
+
+.brand-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3%;
+    background-color: rgba(102, 102, 102, 1);
+    gap: 20px;
+}
+
+.footer {
+    background-color: rgba(61, 61, 61, 1);
+    color: white;
+    padding: 5% 0 2% 0;
+    text-align: center;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter h2 {
+    font-family: "Oxygen", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 100%;
+    width: 65%;
+}
+
+.newsletter-formee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin: 0 auto 30px;
+    background-color: #3c3c3c;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 0.86px solid rgba(255, 255, 255, 0.6);
+    padding: 5px;
+}
+
+.set-font-family {
+    font-family: "Oxygen", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    color: rgba(148, 148, 148, 1);
+}
+
+.newsletter-formee input {
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    width: 80%;
+    background: transparent;
+    color: white;
+}
+
+.newsletter-formee input::placeholder {
+    color: rgba(206, 204, 204, 1);
+}
+
+.newsletter-formee button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    margin-bottom: 3%;
+}
+
+.column h4 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(154, 154, 154, 1);
+    margin-bottom: 10px;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.column ul li {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    line-height: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #eee;
+}
+
+.copyright {
+    border-top: 1px solid rgba(221, 221, 221, 1);
+    padding-top: 20px;
+    font-family: "Oxygen", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.dropbtn {
+    background: transparent;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 0%;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 171%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+#openModal {
+    font-family: "Exo", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: rgba(40, 40, 40, 1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.modal-overlay {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-box {
+    background: #fff;
+    padding: 30px;
+    width: 35%;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.set-btns {
+    background-color: rgba(40, 40, 40, 1);
+    color: white;
+    border: 1px solid rgba(40, 40, 40, 1);
+    border-radius: 30px;
+    padding: 3% 5%;
+    font-family: "Exo", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.set-btns a {
+    text-decoration: none;
+    color: white;
+}
+
+.set-btnn {
+    border: 1px solid rgba(40, 40, 40, 1);
+    border-radius: 30px;
+    background-color: transparent;
+    border-radius: 30px;
+    padding: 3% 5%;
+    font-family: "Exo", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.set-btnn a {
+    text-decoration: none;
+    color: rgba(40, 40, 40, 1);
+}
+
+.modal-box h2 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 100%;
+}
+
+.set-p-tag {
+    color: rgba(148, 148, 148, 1);
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+
+@media (max-width:768px) {
+    .checkout-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .payment-form {
+        width: 100%;
+    }
+
+    .cart-summary {
+        width: 100%;
+    }
+
+    .brand-logos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter h2 {
+        font-size: 35px;
+        width: 80%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-box {
+        width: 75%;
+    }
+}
+
+@media (max-width:480px) {
+    .newsletter h2 {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    #openModal {
+        width: 100%;
+    }
+
+    .set-btns {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+
+    .set-btnn {
+        width: 100%;
+    }
+}

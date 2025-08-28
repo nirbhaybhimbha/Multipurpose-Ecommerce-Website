@@ -1,0 +1,358 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#cars {
+    font-family: "Oxygen", sans-serif;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 1);
+    border: none;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: transparent;
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links li a {
+    font-family: "Oxygen", sans-serif;
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+}
+
+
+.desktop-only {
+    display: flex;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.custom-dropdown {
+    position: relative;
+}
+
+.custom-dropdown a {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    border-radius: 4px;
+    min-width: 150px;
+    z-index: 999;
+    flex-direction: column;
+    list-style: none;
+}
+
+.dropdown-menu li a:hover {
+    color: rgba(115, 40, 126, 1);
+}
+
+.dropdown-menu li {
+    padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.custom-dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+#mobile-dropdown {
+    font-family: "Oxygen", sans-serif;
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 100%;
+    border: none;
+}
+
+.header-icons {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.profile-wrapper {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+    min-width: 150px;
+    z-index: 999;
+}
+
+.profile-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-dropdown ul li {
+    padding: 8px 12px;
+    transition: background 0.2s;
+}
+
+.profile-dropdown ul li:hover {
+    background: #f0f0f0;
+}
+
+.profile-dropdown ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 35px;
+        right: 0;
+        background-color: white;
+        width: 95%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .icons {
+        display: none;
+    }
+}
+
+.icons {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.user,
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user i,
+.cart i {
+    font-size: 16px;
+    color: white;
+}
+
+
+
+
+
+
+
+.container {
+    padding: 4%;
+    /* font-family: "Oxygen", sans-serif; */
+}
+
+.container h2 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    color: rgba(45, 45, 45, 1);
+    margin: 0;
+}
+
+.subtitle {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(87, 87, 87, 1);
+    margin: 10px 0 30px;
+    line-height: 171%;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.order-table thead {
+    background-color: rgba(154, 154, 154, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.order-table th {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 16px 12px;
+    line-height: 100%;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.Order {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(106, 106, 106, 1);
+}
+
+.order-table td {
+    padding: 16px 12px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-cell span {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(61, 61, 61, 1);
+    width: 35%;
+}
+
+.status-badge {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(102, 102, 102, 0.12);
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: rgba(112, 112, 112, 1);
+    width: fit-content;
+}
+
+.norel {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(106, 106, 106, 1);
+    text-decoration: underline;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+}
+
+.Delivery-Date {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(106, 106, 106, 1);
+}
+
+.order-table td strong {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(54, 54, 54, 1);
+}
+
+.Price-order a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-decoration: none;
+    color: rgba(119, 119, 119, 1);
+}
+
+@media (max-width:768px) {
+    .container table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+}

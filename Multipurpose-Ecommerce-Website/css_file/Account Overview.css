@@ -1,0 +1,532 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#cars {
+    font-family: "Oxygen", sans-serif;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 1);
+    border: none;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: transparent;
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links li a {
+    font-family: "Oxygen", sans-serif;
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+}
+
+
+.desktop-only {
+    display: flex;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.custom-dropdown {
+    position: relative;
+}
+
+.custom-dropdown a {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    border-radius: 4px;
+    min-width: 150px;
+    z-index: 999;
+    flex-direction: column;
+    list-style: none;
+}
+
+.dropdown-menu li a:hover {
+    color: rgba(115, 40, 126, 1);
+}
+
+.dropdown-menu li {
+    padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.custom-dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+#mobile-dropdown {
+    border: none;
+}
+
+.header-icons {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.profile-wrapper {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+    min-width: 150px;
+    z-index: 999;
+}
+
+.profile-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-dropdown ul li {
+    padding: 8px 12px;
+    transition: background 0.2s;
+}
+
+.profile-dropdown ul li:hover {
+    background: #f0f0f0;
+}
+
+.profile-dropdown ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 35px;
+        right: 0;
+        background-color: white;
+        width: 95%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .icons {
+        display: none;
+    }
+}
+
+.icons {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.user,
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user i,
+.cart i {
+    font-size: 16px;
+    color: white;
+}
+
+
+
+.container {
+    padding: 5%;
+}
+
+.container h2 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 100%;
+    color: rgba(61, 61, 61, 1);
+    margin: 0;
+}
+
+.subtitle {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 171%;
+    margin: 10px 0 30px;
+    color: rgba(87, 87, 87, 1);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header h3 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.section-header a {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(87, 87, 87, 1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+
+}
+
+thead {
+    background-color: rgba(154, 154, 154, 1);
+    color: #fff;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+th,
+td {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.sett-ct {
+    color: rgba(106, 106, 106, 1);
+}
+
+.item-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-cell span {
+    width: 30%;
+    color: rgba(61, 61, 61, 1);
+}
+
+.set-clor {
+    color: rgba(54, 54, 54, 1);
+}
+
+a {
+    color: rgba(106, 106, 106, 1);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: underline;
+}
+
+.billing-section .card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 5px 20px;
+    margin-bottom: 15px;
+    width: 25%;
+}
+
+.toggle.active::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background: black;
+    border-radius: 50%;
+}
+
+.billing-section p {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(53, 53, 53, 1);
+}
+
+.card-number {
+    margin-left: 0;
+    color: rgba(82, 82, 82, 1);
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+
+
+
+
+
+
+
+.modal-overlay {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-box {
+    background: #fff;
+    padding: 5%;
+    width: 50%;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.set-btns {
+    background-color: rgba(40, 40, 40, 1);
+    color: white;
+    border: 1px solid rgba(40, 40, 40, 1);
+    border-radius: 30px;
+}
+
+.set-btnn {
+    border: 1px solid rgba(40, 40, 40, 1);
+    border-radius: 30px;
+    background-color: transparent;
+    border-radius: 30px;
+}
+
+.set-p-tag {
+    color: rgba(148, 148, 148, 1);
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    width: 80%;
+}
+
+.track-order-container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Oxygen", sans-serif;
+}
+
+.track-order-fields {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.track-field {
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.track-field label {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15.5px;
+    color: rgba(89, 89, 89, 1);
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.track-field input {
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 14px;
+    outline: none;
+    background-color: #f9f9f9;
+}
+
+.track-btn {
+    background-color: rgba(40, 40, 40, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 14px 30px;
+    font-family: "Exo", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .billing-section .card {
+        width: 35%;
+    }
+
+    .orders-section table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .item-cell span {
+        width: 100%;
+    }
+
+    .modal-box {
+        width: 75%;
+    }
+
+}
+
+@media (max-width:570px) {
+    .modal-box {
+        width: 90%;
+    }
+}
+
+@media (max-width:480px) {
+    .section-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .billing-section .card {
+        width: 75%;
+    }
+
+    .set-p-tag {
+        width: 100%;
+        text-align: center;
+    }
+
+    .modal-box {
+        width: 80%;
+    }
+
+    .track-field {
+        flex: 0;
+    }
+
+    .track-order-fields {
+        flex-direction: column;
+    }
+
+    .container h2 {
+        font-size: 28px;
+    }
+}
